@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Emotion Music App</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='a_style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1>🎵 Emotion-Based Music Player 🎭</h1>
+
+    <div class="video-container">
+      <img id="videoFeed" src="{{ url_for('video_feed') }}" alt="Video Feed" />
+    </div>
+
+    <div class="emotion-display">
+      <h2>Detected Emotion: <span id="emotion">Loading...</span></h2>
+    </div>
+
+    <div id="songList" class="song-list"></div>
+  </div>
+
+  <script src="{{ url_for('static', filename='b_script.js') }}"></script>
+</body>
+</html>
